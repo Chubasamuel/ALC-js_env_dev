@@ -7,7 +7,7 @@ import config from "../webpack.config.dev"
 /*eslint-disable no-console*/
 const port=3000;
 const app=express();
-const compiler=webpack(config)
+const compiler=webpack(config);
 
 app.use(
 require('webpack-dev-middleware')(compiler, {
@@ -21,6 +21,13 @@ res.sendFile(path.join(__dirname,"../src/index.html"));
 
 });
 
+app.get('/users',function(req,res){
+	res.json([
+		{"id":1,"firstName":"Bob","lastName":"Harry","email":"bob.harry@g.xyz"},
+		{"id":2,"firstName":"Tom","lastName":"Park","email":"tom.park@g.xyz"},
+		{"id":3,"firstName":"Robins","lastName":"Shey","email":"robins.shey@g.xyz"},
+		{"id":4,"firstName":"Sam","lastName":"Edwards","email":"sam.edwards@g.xyz"}
+	]);});
 app.listen(port,function(err){
 if(err){console.log(err);}
 else{
