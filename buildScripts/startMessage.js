@@ -1,3 +1,4 @@
 import chalk from 'chalk';
+/*eslint-disable no-console*/
+console.log(chalk.green("DCOR Node App: Application Started In Dev mode"));
 
-console.log(chalk.green("DCOR Node App: Application Started Successfully")); //eslint-disable-line no-console

@@ -15,5 +15,7 @@ getUsers().then(result=>{
 		<td>${user.email}</td>
 		</tr>`
 	});
-global.document.getElementById("users").innerHTML=usersBody;
+global.document.getElementById("users").innerHTML=usersBody+"getUsers :::"+getUsers+"<br /><br />"+getUsers();
 });
+
+console.log("DCOR- testing index.js");
